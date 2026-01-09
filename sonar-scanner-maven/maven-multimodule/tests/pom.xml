@@ -35,6 +35,10 @@
             <goals>
               <goal>prepare-agent</goal>
             </goals>
+            <configuration>
+                <!-- the property contains config for invoking JaCoCo agent -->
+                <propertyName>jacoco.argLine</propertyName>
+            </configuration>
           </execution>
           <execution>
             <id>report</id>
