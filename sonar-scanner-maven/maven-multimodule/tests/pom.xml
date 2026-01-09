@@ -21,7 +21,7 @@
 
   <properties>
     <sonar.sources></sonar.sources>
-    <sonar.tests>src</sonar.tests>
+    <sonar.tests>src/test/java</sonar.tests>
   </properties>
 
   <build>
@@ -31,7 +31,25 @@
         <artifactId>jacoco-maven-plugin</artifactId>
         <executions>
           <execution>
+            <id>prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
             <id>report</id>
+            <goals>
+              <goal>report</goal>
+            </goals>
+            <configuration>
+              <formats>
+                <format>XML</format>
+                <format>CSV</format>
+              </formats>
+            </configuration>
+          </execution>
+          <execution>
+            <id>report-aggregate</id>
             <goals>
               <goal>report-aggregate</goal>
             </goals>
