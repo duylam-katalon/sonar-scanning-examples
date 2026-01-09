@@ -9,4 +9,9 @@ public class Module1Test {
     Module1 module1 = new Module1();
     module1.coveredByUnitTest();
   }
+
+  @Test
+  public void integrationTest1() {
+    new Module1().coveredByIntegrationTest();
+  }
 }

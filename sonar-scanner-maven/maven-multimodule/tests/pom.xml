@@ -10,21 +10,19 @@
   </parent>
 
   <artifactId>tests</artifactId>
+  <packaging>pom</packaging>
 
   <name>Tests</name>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.sonarqube</groupId>
-      <artifactId>module1</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.sonarqube</groupId>
-      <artifactId>module2</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-  </dependencies>
+  <modules>
+    <module>test1</module>
+    <module>test2</module>
+  </modules>
+
+  <properties>
+    <sonar.sources></sonar.sources>
+    <sonar.tests>src</sonar.tests>
+  </properties>
 
   <build>
     <plugins>
@@ -43,5 +41,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>
