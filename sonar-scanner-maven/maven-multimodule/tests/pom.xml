@@ -10,38 +10,17 @@
   </parent>
 
   <artifactId>tests</artifactId>
+  <packaging>pom</packaging>
 
   <name>Tests</name>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.sonarqube</groupId>
-      <artifactId>module1</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.sonarqube</groupId>
-      <artifactId>module2</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-  </dependencies>
+  <modules>
+    <module>test1</module>
+    <module>test2</module>
+  </modules>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>report</id>
-            <goals>
-              <goal>report-aggregate</goal>
-            </goals>
-            <phase>verify</phase>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-
+  <properties>
+    <sonar.sources></sonar.sources>
+    <sonar.tests>src/test/java</sonar.tests>
+  </properties>
 </project>
