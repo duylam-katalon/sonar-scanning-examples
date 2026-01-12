@@ -12,7 +12,9 @@ For a basic example, see [basic Maven project](../maven-basic/README.md).
 Build the project, execute all the tests, and analyze it with SonarScanner for Maven:
 
 ```shell
-mvn -X --log-file mvn.log clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.2.0.4988:sonar -Dsonar.token=...
+mvn -X --log-file mvn.log clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.2.0.4988:sonar \
+  -Dsonar.organization=... -Dsonar.projectKey=... \
+  -Dsonar.token=...
 ```
 
 ## Description
