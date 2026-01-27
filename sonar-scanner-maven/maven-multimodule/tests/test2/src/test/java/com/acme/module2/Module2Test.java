@@ -8,4 +8,9 @@ public class Module2Test {
   public void coveredByUnitTest() {
     new Module2().coveredByUnitTest();
   }
+
+  @Test
+  public void integrationTest2() {
+    new Module2().coveredByIntegrationTest();
+  }
 }
